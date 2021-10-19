@@ -36,5 +36,15 @@ class Store(models.Model):
 # =======================================================================
 
 
+class dummy_table(models.Model):
+    store_id = models.IntegerField(primary_key=True)
+    store_name = models.CharField(max_length=20)
+    book = models.ManyToManyField(Book)
+    class Meta:
+        db_table = "store"
+    def __str__(self):
+        return self.store_name
+
+
 
 
