@@ -41,7 +41,7 @@ class dummy_table(models.Model):
     store_name = models.CharField(max_length=20)
     book = models.ManyToManyField(Book)
     class Meta:
-        db_table = "store"
+        db_table = "dummy_table"
     def __str__(self):
         return self.store_name
 
